@@ -1,0 +1,13 @@
+<h1><%=  @driver.first_name%>'s Page</h1>
+
+<ul>
+
+  <li>First Name: <%= @driver.first_name%></li>
+  <li>Last Name: <%= @driver.last_name %></li>
+  <% if @driver.license.present? %>
+    <li> License Number: <%= @driver.license.number %></li>
+    <li> License State: <%= @driver.license.state %></li>
+    <% end %>
+</ul>
+
+<p> <%= link_to "back to all drivers", drivers_path %> </p>
